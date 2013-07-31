@@ -64,7 +64,7 @@ DECLARE
   tabname TEXT;
 BEGIN
 
-  IF TG_OP = 'UPDATE' or TG_OP = 'DELETE' THEN
+  IF TG_OP = 'UPDATE' or TG_OP = 'INSERT' THEN
     tabname = NEW.tabname;
   ELSE
     tabname = OLD.tabname;
